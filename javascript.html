@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="c()">Click Me</button><br>
+    <label id="demo">Input</label><input id="inp" ></input><br>
+    <input id="ourInput" type="text">
+    <h1 id="ourHeader">Please Enter a name</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit optio aperiam, quisquam magni voluptate asperiores quidem consequuntur modi id dolorum sit impedit deserunt eligendi veritatis dolore labore! Non, sapiente odit.</p>
+    
+    
+    <script>
+
+       const our = document.getElementById("ourInput")
+       const ourHeader = document.getElementById("ourHeader")
+       
+       ourInput.addEventListener("input",amz)
+       function amz(){
+      
+        if(our.value) 
+        {
+            ourHeader.innerText = our.value + " is cool"
+        }
+         else {
+             ourHeader.innerText = "please enter a name"
+
+         }
+           
+       }
+
+
+//meow object exsample
+        let meowsalot={
+            species:"cat",//property
+            eyeColor:"green",
+            jump: function(){//function
+                alert("Image the just jumped")
+            }
+        }
+      //  alert(meowsalot.jump())
+
+
+        // Constructor function for Person objects
+        function Person(first, last, age, eye) {
+            this.firstName = first;
+            this.lastName = last;
+             this.age = age;
+        this.eyeColor = eye;
+        }
+       
+       // let n=prompt("Pleasr enter name");
+       // let num=prompt("Pleasr enter age");
+
+// Create two Person objects
+const myFather = new Person(n, "Doe", n, "blue");
+const myMother = new Person("Sally", "Rally", 48, "green");
+
+function c(){
+        // Display age
+        document.getElementById("demo").innerHTML =
+            "My father is " + myFather.age + ". My mother is " + myMother.age + "."; 
+}
+    </script>
+</body>
+</html>
