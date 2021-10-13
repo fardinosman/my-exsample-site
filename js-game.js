@@ -90,7 +90,7 @@ ourForm.addEventListener("submit",handleSubmit)
         //if you lost
         if(state.wrongAnswers){
             endMessage.textContent = "Try Again! You Lost."
-            document.body.classList.add("overlay-is-open")
+            document.body.classList.remove("overlay-is-open")
             setTimeout(() => resetButton.focus(),331)
             
            
